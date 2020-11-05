@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "holiday-cookies-app"
+    }
+  },
+  "defaultProject": "holiday-cookies-app",
+  "cli": {
+    "analytics": "bee74cdd-9063-4d9c-96c4-63ffaa142393"
+  }
 }
