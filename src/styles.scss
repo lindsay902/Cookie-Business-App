@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .toolbar {
     position: absolute;
     top: 0;
@@ -6,7 +8,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: forestgreen;
+    background-color: #2d9776;
     color: white;
     font-weight: 600;
     display: flex;
@@ -18,9 +20,12 @@
   }
 
   .title {
-    padding-right: 50%;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
   }
 
   .menu {
     padding: 1%;
   }
+
+  
