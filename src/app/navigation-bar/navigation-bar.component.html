@@ -4,12 +4,13 @@
 
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
+
+  <div class="toolbar" role="banner">
   <span class="menu">
   <mat-menu #appMenu="matMenu">
     <ng-template matMenuContent>
-      <button mat-menu-item><a routerLink="/products-component" routerLinkActive="active">Products</a></button>
-      <button mat-menu-item><a routerLink="/contact-component" routerLinkActive="active">Contact</a></button>
+      <button mat-menu-item><a routerLink="../products">Products</a></button>
+      <button mat-menu-item><a routerLink="../contact">Contact</a></button>
     </ng-template>
   </mat-menu>
   
@@ -17,6 +18,8 @@
     <mat-icon>more_vert</mat-icon>
   </button>
   </span>
+   
+    
 
   <h1 class="title" style="font-family: 'Pacifico', cursive;">holiday cookies</h1>
  
