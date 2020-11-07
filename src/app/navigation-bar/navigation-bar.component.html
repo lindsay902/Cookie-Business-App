@@ -1,0 +1,27 @@
+  
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <span class="menu">
+  <mat-menu #appMenu="matMenu">
+    <ng-template matMenuContent>
+      <button mat-menu-item><a routerLink="/products-component" routerLinkActive="active">Products</a></button>
+      <button mat-menu-item><a routerLink="/contact-component" routerLinkActive="active">Contact</a></button>
+    </ng-template>
+  </mat-menu>
+  
+  <button mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  </span>
+
+  <h1 class="title">holiday cookies</h1>
+ 
+    <span class="material-icons">
+      shopping_cart
+      </span>
+</div>
+
