@@ -37,6 +37,16 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  a:link {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
+
   p {
     margin: 0;
   }
@@ -141,16 +151,7 @@
     z-index: -10;
   }
 
-  a,
-  a:visited,
-  a:hover {
-    color: #1976d2;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #125699;
-  }
+ 
 
   .terminal {
     position: relative;
