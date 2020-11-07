@@ -1,9 +1,10 @@
 <h2>Cookie Types</h2>
-<div *ngFor="let product of products">
-
+<div class="content" *ngFor="let product of products">
+    
     <h3>
         {{ product.name }}
     </h3>
+    <img class ="product-image" src="{{ product.image }}">
     <p>
         {{ product.price | currency }}
     </p>
