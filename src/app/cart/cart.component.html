@@ -1,1 +1,9 @@
-<p>cart works!</p>
+<h3>Cart</h3>
+
+<div class="content" *ngFor="let item of items">
+  <span>{{ item.name }}</span>
+  <span>{{ item.price | currency }}</span>
+</div>
+
+
+<button><a routerLink="/checkout">Checkout</a></button>

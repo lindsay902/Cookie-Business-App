@@ -7,12 +7,12 @@
         </h3>
         <img class ="product-image" src="{{ product.image }}">
         <p>
-            {{ product.price | currency }}
+            {{ product.price | currency }} per dozen
         </p>
         <p>
             {{ product.description }}
         </p>
         
-        <button (click)="addToCart(product)">Buy</button>
+        <button (click)="addToCart(product)">Add to Cart</button>
   
   </div>

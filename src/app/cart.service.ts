@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class CartService {
 
+export class CartService {
   items = [];
 
   addToCart(product) {
@@ -19,6 +19,4 @@ export class CartService {
     this.items = [];
     return this.items;
   }
-
-  constructor() { }
 }

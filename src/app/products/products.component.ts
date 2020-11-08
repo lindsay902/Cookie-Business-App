@@ -11,12 +11,12 @@ import { CartService } from '../cart.service';
 })
 export class ProductsComponent implements OnInit {
 
+  products = products;
+
   constructor(
     private route: ActivatedRoute,
     private cartService: CartService
   ) { }
-
-  products = products;
 
   addToCart(product) {
     this.cartService.addToCart(product);
