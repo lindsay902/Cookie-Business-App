@@ -12,6 +12,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ContactComponent } from './contact/contact.component';
     MaterialModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {path: 'products', component: ProductsComponent},
       {path: 'home', component: AppComponent},

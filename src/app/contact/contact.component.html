@@ -1,1 +1,25 @@
-<p>contact works!</p>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<div class="container">
+    <h2 class="container">Contact Us!</h2>
+    <div class="row">
+    <div class="col-md-6 offset-md-3">
+    <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)"><div class="form-group">
+    <label for="Email">Email</label>
+    <input type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Enter email"formControlName="Email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+    <label for="name">Your Name</label>
+    <input type="text" class="form-control" name="name" placeholder="Your Name" formControlName="Fullname">
+    </div>
+    <div class="form-group">
+    <label for="comment">Comment</label>
+    <textarea class="form-control" formControlName="Comment" name="Comment">
+    </textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!FormData.valid">Submit</button>
+    </form>
+    </div>
+    </div>
+    </div>
