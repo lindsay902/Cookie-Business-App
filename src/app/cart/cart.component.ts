@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 
 
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -16,6 +17,17 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.items = this.cartService.getItems();
+  }
+
+  //delete(product) {
+    //this.items.delete(product).then(() => {
+      //return this.cartService.getItems();
+    //});
+  //}
+
+  deleteItem(product) {
+    let itemToRemove = this.items.indexOf(product);
+    this.items.splice(itemToRemove, 1)
   }
 
 }

@@ -13,9 +13,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatBadgeModule } from '@angular/material/badge';
 import { ContactService } from './contact.service';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { CartService } from './cart.service';
 
 
 @NgModule({
@@ -35,6 +37,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatBadgeModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       {path: 'products', component: ProductsComponent},
@@ -44,7 +47,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     ]),
   ],
   providers: [
-    ContactService
+    ContactService,
+    CartService
   ],
   bootstrap: [AppComponent]
 })

@@ -23,6 +23,7 @@ export class ProductsComponent implements OnInit {
     window.alert('Your product has been added to the cart!');
   }
   
+  
   ngOnInit(): void {
   }
 
