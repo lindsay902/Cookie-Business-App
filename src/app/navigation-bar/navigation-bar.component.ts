@@ -1,4 +1,7 @@
 import { Component, OnInit} from '@angular/core';
+import { CartService } from '../cart.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 
 @Component({
@@ -7,15 +10,17 @@ import { Component, OnInit} from '@angular/core';
 })
 export class NavigationBarComponent implements OnInit {
   
-  constructor() { }
+
+
+  hidden = this.cartService.hidden;
+  
+
+  constructor(
+    private route: ActivatedRoute,
+    private cartService: CartService
+  ) { }
 
   ngOnInit(): void {
-  }
-
-  hidden = false;
-
-  toggleBadgeVisibility() {
-    this.hidden = !this.hidden;
   }
 
 }

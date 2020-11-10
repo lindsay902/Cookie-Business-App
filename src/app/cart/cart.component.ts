@@ -19,12 +19,6 @@ export class CartComponent implements OnInit {
     this.items = this.cartService.getItems();
   }
 
-  //delete(product) {
-    //this.items.delete(product).then(() => {
-      //return this.cartService.getItems();
-    //});
-  //}
-
   deleteItem(product) {
     let itemToRemove = this.items.indexOf(product);
     this.items.splice(itemToRemove, 1)

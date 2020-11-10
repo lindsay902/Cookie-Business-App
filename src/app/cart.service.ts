@@ -7,6 +7,8 @@ import { Injectable } from '@angular/core';
 export class CartService {
   items = [];
 
+  hidden = true;
+
   addToCart(product) {
     this.items.push(product);
   }
@@ -14,20 +16,26 @@ export class CartService {
   getItems() {
     return this.items;
   }
-
-  deleteItem(product) {
-    let itemToRemove = this.items.indexOf(product);
-    this.items.splice(itemToRemove, 1)
-  }
-
-  removeItem(product){
-    this.items.forEach( (item, index) => {
-      if(item === [product]) this.items.splice(index,1);
-    });
- }
-
+  
   clearCart() {
     this.items = [];
     return this.items;
   }
+
+  itemInCart() {
+    let itemCount = this.items.length;
+    if (itemCount >= 1) {
+      this.hidden = false;
+    }
+  }
+
+
+  // toggle() {
+  //   this.hidden = !this.hidden;
+  // }
+
+  // itemInCartBadge() {
+  //   let badgeContent = this.items.length;
+  // }
+
 }
