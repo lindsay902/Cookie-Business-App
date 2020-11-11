@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { products } from './products';
 
 @Injectable({
   providedIn: 'root',
@@ -36,15 +37,4 @@ export class CartService {
       this.hidden = false;
     }
   }
-
-
-
-  // toggle() {
-  //   this.hidden = !this.hidden;
-  // }
-
-  // itemInCartBadge() {
-  //   let badgeContent = this.items.length;
-  // }
-
 }
