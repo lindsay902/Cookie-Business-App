@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 
 import { products } from '../products';
 import { CartService } from '../cart.service';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 @Component({
   selector: 'app-products',

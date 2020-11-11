@@ -18,6 +18,8 @@ import { ContactService } from './contact.service';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartService } from './cart.service';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 
 @NgModule({
@@ -39,6 +41,7 @@ import { CartService } from './cart.service';
     FormsModule,
     MatBadgeModule,
     ReactiveFormsModule,
+    MatGridListModule,
     RouterModule.forRoot([
       {path: 'products', component: ProductsComponent},
       {path: 'home', component: AppComponent},
