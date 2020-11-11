@@ -11,6 +11,7 @@ export class CartService {
 
   addToCart(product) {
     this.items.push(product);
+    product.quantity = 1;
   }
 
   getItems() {
@@ -28,6 +29,7 @@ export class CartService {
       this.hidden = false;
     }
   }
+
 
 
   // toggle() {

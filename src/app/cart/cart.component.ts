@@ -3,6 +3,7 @@ import { CartService } from '../cart.service';
 
 
 
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -22,6 +23,14 @@ export class CartComponent implements OnInit {
   deleteItem(product) {
     let itemToRemove = this.items.indexOf(product);
     this.items.splice(itemToRemove, 1)
+  }
+
+  increaseQuantity(product) {
+    product.quantity ++;
+  }
+
+  decreaseQuantity(product) {
+    product.quantity --;
   }
 
 }

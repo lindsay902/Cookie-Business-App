@@ -1,6 +1,6 @@
     <h2 class="header-title">Cookie Types</h2>
 
-    <mat-grid-list class="grid" cols="2" rowHeight="1:1.1">
+    <mat-grid-list class="grid" cols="2" rowHeight="1:1">
         <mat-grid-tile *ngFor="let product of products">
             <h3 class="product-title">
             {{ product.name }}
@@ -12,8 +12,7 @@
             <p>
                 {{ product.description }}
             </p>
-            <span class="increment-decrement"><button> - </button><br><p>  0  </p> <button> + </button></span>
-            <br>
+        
             <button (click)="addToCart(product)">Add to Cart</button>
         </mat-grid-tile>
       </mat-grid-list>

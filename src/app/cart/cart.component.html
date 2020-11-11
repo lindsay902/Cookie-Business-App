@@ -1,4 +1,4 @@
-<h3 id="cart-header">Cart</h3>
+<h2 class="header-title">Cart</h2>
 
 <div class="content">
   <table class="form-control">
@@ -11,7 +11,11 @@
     <tr class="table" *ngFor="let item of items">
       <td>{{ item.name }}</td>
       <td>{{ item.price | currency }}</td>
-      <td>make increment/decrement feature</td>
+      <td>
+        <button (click)="decreaseQuantity(item)">+</button>
+        {{ item.quantity }}
+        <button (click)="increaseQuantity(item)">+</button>
+      </td>
       <td><button class="delete" (click)="deleteItem(item)">Delete</button></td>
     </tr>
     <tr>
