@@ -89,7 +89,6 @@ a.button {
 .increment-decrement {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
 }
 
 .checkout {
@@ -98,7 +97,7 @@ a.button {
 }
 
 .product-image {
-  width: 120px;
+  width: 200px;
 }
 
 .spacer {
@@ -186,4 +185,10 @@ h2.header-title {
 h3.product-title {
   font-family: 'Pacifico', cursive;
   font-weight: lighter;
+  font-size: larger;
+}
+
+.grid {
+  margin-left: 10%;
+  margin-right: 10%;
 }
