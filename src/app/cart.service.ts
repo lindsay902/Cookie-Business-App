@@ -10,10 +10,16 @@ export class CartService {
   hidden = true;
 
   addToCart(product) {
-    //check if product is already in items
-    this.items.push(product);
-    product.quantity = 1;
+    let checkForItem = this.items.find(({name}) => name === product.name); 
+      if (!checkForItem) {
+        this.items.push(product);
+        product.quantity = 1;
+      }
   }
+
+  //getSubtotal(price, quantity) {
+    //let subtotal = this.items
+  //}
 
   getItems() {
     return this.items;

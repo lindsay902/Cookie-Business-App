@@ -5,18 +5,17 @@
 }
 
 .navigationbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 60px;
-    display: flex;
-    align-items: center;
     background-color: #2d9776;
     color: white;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
 .material-icons {

@@ -4,7 +4,7 @@
   <table class="form-control">
     <tr>
       <th>Item</th>
-      <th>Price</th>
+      <th>Price per dozen</th>
       <th>Quantity</th>
       <th>Subtotal</th>
       <th>Edit</th>
@@ -13,16 +13,16 @@
       <td>{{ item.name }}</td>
       <td>{{ item.price | currency }}</td>
       <td>
-        <button (click)="decreaseQuantity(item)">+</button>
+        <button (click)="decreaseQuantity(item)">-</button>
         {{ item.quantity }}
         <button (click)="increaseQuantity(item)">+</button>
       </td>
-      <td>subtotal</td>
+      <td>{{ item.quantity * item.price | currency }}</td>
       <td><button class="delete" (click)="deleteItem(item)">Delete</button></td>
     </tr>
     <tr>
       <td colspan="3">Total</td>
-      <td colspan="2">total</td>
+      <td colspan="2">{{ total | currency }}</td>
     </tr>
     <tr>
       <td colspan="4" class="checkout"><button><a class="button" routerLink="/checkout">Checkout</a></button></td>

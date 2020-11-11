@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
+import { products } from '../products';
 
 
 
@@ -11,6 +12,7 @@ import { CartService } from '../cart.service';
 })
 export class CartComponent implements OnInit {
   items;
+
 
   constructor(
     private cartService: CartService
@@ -35,6 +37,13 @@ export class CartComponent implements OnInit {
     if (product.quantity > 0) {
       product.quantity --;
     }
+  }
+
+  get total() {
+    return this.items.reduce((sum,x)=>
+    ({quantity:1,
+      price:sum.price+x.quantity*x.price}),
+    {quantity:1,price:0}).price;
   }
 
 }
