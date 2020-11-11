@@ -10,6 +10,7 @@ export class CartService {
   hidden = true;
 
   addToCart(product) {
+    //check if product is already in items
     this.items.push(product);
     product.quantity = 1;
   }

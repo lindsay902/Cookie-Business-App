@@ -26,11 +26,15 @@ export class CartComponent implements OnInit {
   }
 
   increaseQuantity(product) {
-    product.quantity ++;
+    if (product.quantity < 20) {
+      product.quantity ++;
+    }
   }
 
   decreaseQuantity(product) {
-    product.quantity --;
+    if (product.quantity > 0) {
+      product.quantity --;
+    }
   }
 
 }

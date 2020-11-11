@@ -6,6 +6,7 @@
       <th>Item</th>
       <th>Price</th>
       <th>Quantity</th>
+      <th>Subtotal</th>
       <th>Edit</th>
     </tr>
     <tr class="table" *ngFor="let item of items">
@@ -16,11 +17,12 @@
         {{ item.quantity }}
         <button (click)="increaseQuantity(item)">+</button>
       </td>
+      <td>subtotal</td>
       <td><button class="delete" (click)="deleteItem(item)">Delete</button></td>
     </tr>
     <tr>
-      <td colspan="2">Total</td>
-      <td colspan="2">$</td>
+      <td colspan="3">Total</td>
+      <td colspan="2">total</td>
     </tr>
     <tr>
       <td colspan="4" class="checkout"><button><a class="button" routerLink="/checkout">Checkout</a></button></td>
