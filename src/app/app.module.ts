@@ -19,6 +19,8 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartService } from './cart.service';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatStepperModule} from '@angular/material/stepper';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -30,7 +32,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     NavigationBarComponent,
     ContactComponent,
     CartComponent,
-    CheckoutComponent    
+    CheckoutComponent,
+    HomeComponent    
   ],
   imports: [
     BrowserModule,
@@ -43,9 +46,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatBadgeModule,
     ReactiveFormsModule,
     MatGridListModule,
+    MatStepperModule,
     RouterModule.forRoot([
       {path: 'products', component: ProductsComponent},
-      {path: 'home', component: AppComponent},
+      {path: 'home', component: HomeComponent},
       {path: 'cart', component: CartComponent},
       {path: 'checkout', component: CheckoutComponent}
     ]),

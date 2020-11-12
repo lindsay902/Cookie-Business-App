@@ -11,13 +11,11 @@ import { ActivatedRoute } from '@angular/router';
 export class NavigationBarComponent implements OnInit {
   
 
-
-  hidden = this.cartService.hidden;
   
 
   constructor(
     private route: ActivatedRoute,
-    private cartService: CartService
+    public cartService: CartService
   ) { }
 
   ngOnInit(): void {

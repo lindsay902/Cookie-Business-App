@@ -18,10 +18,6 @@ export class CartService {
       }
   }
 
-  //getSubtotal(price, quantity) {
-    //let subtotal = this.items
-  //}
-
   getItems() {
     return this.items;
   }
@@ -35,6 +31,8 @@ export class CartService {
     let itemCount = this.items.length;
     if (itemCount >= 1) {
       this.hidden = false;
+      console.log(this.hidden);
     }
+    return this.hidden;
   }
 }
